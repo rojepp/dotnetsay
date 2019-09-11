@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: rojepp/setup-dotnet@master
       with:
         dotnet-version: 2.2.402
     - name: Display DOTNET_ROOT
@@ -19,6 +19,6 @@ jobs:
       run: dotnet tool install dotnetsay --tool-path dotnetsay
     - name: Run dotnetsay
       run: dotnetsay/dotnetsay
-      env:
+  #    env:
         # Work around https://github.com/actions/setup-dotnet/issues/29
-        DOTNET_ROOT: /opt/hostedtoolcache/dncs/2.2.402/x64    
+  #      DOTNET_ROOT: /opt/hostedtoolcache/dncs/2.2.402/x64    
