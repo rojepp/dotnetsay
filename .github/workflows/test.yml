@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
-      uses: rojepp/setup-dotnet@master
+      uses: rojepp/setup-dotnet@fix_dotnet_root
       with:
         dotnet-version: 2.2.402
     - name: Display DOTNET_ROOT
