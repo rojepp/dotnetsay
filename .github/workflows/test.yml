@@ -24,6 +24,6 @@ jobs:
       if: runner.os != 'Windows'
       run: dotnetsay/dotnetsay
     - name: Run dotnetsay
-      if: runner.os != 'Windows'
+      if: runner.os == 'Windows'
       run: dotnetsay/dotnetsay.exe
 
