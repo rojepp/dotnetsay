@@ -15,9 +15,7 @@ jobs:
     - name: Setup .NET Core
       uses: rojepp/setup-dotnet@fix_dotnet_root
       with:
-        dotnet-version: 2.2.402
-    - name: Display DOTNET_ROOT
-      run: ls $DOTNET_ROOT/..
+        dotnet-version: ${{ matrix.dotnet }}
     - name: Install dotnetsay
       run: dotnet tool install dotnetsay --tool-path dotnetsay
     - name: Run dotnetsay
